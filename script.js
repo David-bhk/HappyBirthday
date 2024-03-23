@@ -1,10 +1,14 @@
-const audio = document.querySelector('audio');
-  const body = document.body;
+const playButton = document.getElementById('playButton');
+const audio = document.getElementById('birthdayAudio');
 
-  audio.addEventListener('play', () => {
-    body.classList.add('play-music');
-  });
+playButton.addEventListener('click', () => {
+    audio.play();
+});
 
-  audio.addEventListener('pause', () => {
-    body.classList.remove('play-music');
-  });
+audio.addEventListener('play', () => {
+    document.body.classList.add('play-music');
+});
+
+audio.addEventListener('pause', () => {
+    document.body.classList.remove('play-music');
+});
